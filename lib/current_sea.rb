@@ -4,6 +4,5 @@ require_relative './current_sea/scraper.rb'
 require_relative './current_sea/cli.rb'
 
 module CurrentSea
-  
   # Your code goes here...
 end
