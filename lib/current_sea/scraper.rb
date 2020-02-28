@@ -1,4 +1,4 @@
-require 'Nokogiri'
+require 'Nokogiri' #.css 
 require 'open-uri'
 
 class Scraper
@@ -8,11 +8,11 @@ class Scraper
     unit = html.css("table.tablesorter.ratesTable tr")
      
         unit.each do |data|
-            currency = Currency.new
-            currency.name = data.css("td:nth-child(1)").text
-            currency.inverse = data.css("td:nth-child(2)").text
-            currency.to_dollars = data.css("td:nth-child(3)").text
-            currency.save
+            money = Currency.new
+            money.name = data.css("td:nth-child(1)").text
+            money.inverse = data.css("td:nth-child(2)").text
+            money.to_dollars = data.css("td:nth-child(3)").text
+            money.save
         end
   end
 end
